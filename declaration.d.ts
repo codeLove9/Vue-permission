@@ -1,0 +1,1 @@
+declare module "@/utils/Export2Excel.js"

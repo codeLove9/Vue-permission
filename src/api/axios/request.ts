@@ -67,8 +67,9 @@ function request(options: optionsITF) {
     isMock = options.mock
   }
   // 对线上环境处理
-  if (config.env == "prod") {
-    service.defaults.baseURL = config.baseApi
+  if (config.env == "production") {
+    // service.defaults.baseURL = config.baseApi
+    service.defaults.baseURL = isMock ? config.mockApi : config.baseApi
   } else {
     service.defaults.baseURL = isMock ? config.mockApi : config.baseApi
   }

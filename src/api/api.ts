@@ -1,4 +1,3 @@
-import { AxiosResponse } from "axios"
 import request from "./axios/request"
 
 export const getTableDataAPI = () => {

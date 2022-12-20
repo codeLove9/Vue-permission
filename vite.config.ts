@@ -20,5 +20,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve("./src") // @代替src
     }
-  }
+  },
+  // 部署GitHubPage
+  base: "/my-vue-app"
 })

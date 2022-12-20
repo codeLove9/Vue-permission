@@ -18,7 +18,7 @@ const EnvConfig: EnvConfigITF = {
     mockApi: " https://www.fastmock.site/mock/89e911b92b4c30a955ca1d339a96e9f2/api"
   },
   test: {
-    baseApi: "test/future.com/api",
+    baseApi: "/api",
     mockApi: " https://www.fastmock.site/mock/89e911b92b4c30a955ca1d339a96e9f2/api"
   },
   production: {

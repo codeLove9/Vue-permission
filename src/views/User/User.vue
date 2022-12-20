@@ -39,12 +39,7 @@
             v-permission="{ right: 'delete', isAbled: false }"
             >删除</el-button
           >
-          <el-button
-            type="info"
-            v-if="role === '普通用户'"
-            v-permission="{ right: 'delete', isAbled: true }"
-            >您没有权限,请联系管理员</el-button
-          >
+          <el-alert title="您没有权限" type="info" v-if="role === '普通用户'" show-icon :closable="false" style="width: 129px;"/>
         </template>
       </el-table-column>
     </el-table>

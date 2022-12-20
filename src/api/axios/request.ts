@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios"
 import config from "./config"
 import { ElMessage } from "element-plus"
-import router from '@/router/index'
+import router from "@/router/index"
 
 interface optionsITF {
   url: string
@@ -40,7 +40,7 @@ service.interceptors.response.use(
       } else if (response.data.code === 401) {
         //token过期或者篡改了token，跳往401
         window.localStorage.clear()
-        router.push('/401')
+        router.push("/401")
       } else {
         ElMessage.error(response.msg || NETWORK_ERROR)
         return Promise.reject(response.msg || NETWORK_ERROR)

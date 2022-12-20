@@ -1,5 +1,5 @@
 <template>
-  <el-menu class="el-menu-vertical-demo" text-color="rgb(82, 70, 75)" :collapse="collapse" router active-text-color="rgb(231, 173, 14)">
+  <el-menu class="el-menu-vertical-demo" text-color="rgb(82, 70, 75)" :collapse="collapse" router active-text-color="rgb(231, 173, 14)" :default-openeds="openeds">
     <h3 v-show="store.state.collapse">后台</h3>
     <h3 v-show="!store.state.collapse">后台管理</h3>
     <!-- 一级菜单 -->
@@ -15,7 +15,7 @@
       <span>{{ item.label }}</span>
     </el-menu-item>
     <!-- 二级菜单 -->
-    <el-sub-menu :index="item.label" v-for="item in hasChildren" :key="item.path">
+    <el-sub-menu :index="item.label" v-for="item in hasChildren" :key="item.path" >
       <template #title>
         <el-icon>
           <component class="icons" :is="item.icon"></component>
@@ -82,6 +82,8 @@ interface ListItf {
 const store = useStore()
 const collapse = computed(() => store.state.collapse)
 const dynamicList = computed<ListItf[]>(() => store.state.menu)
+
+const openeds = ['错误页面', '其他']
 
 const noChildren = computed(() => {
   return dynamicList.value.filter(item => !item.children)

@@ -38,6 +38,13 @@ export default {
               url: "MenuTest/MenuTest"
             },
             {
+              path: "/btnTest",
+              name: "btnTest",
+              label: "按钮权限测试页",
+              icon: "SwitchButton",
+              url: "BtnTest/BtnTest"
+            },
+            {
               label: "错误页面",
               icon: "DocumentDelete",
               children: [
@@ -118,6 +125,13 @@ export default {
               url: "User/User"
             },
             {
+              path: "/btnTest",
+              name: "btnTest",
+              label: "按钮权限测试页",
+              icon: "SwitchButton",
+              url: "BtnTest/BtnTest"
+            },
+            {
               label: "错误页面",
               icon: "DocumentDelete",
               children: [
@@ -144,14 +158,14 @@ export default {
                 {
                   path: "/page1",
                   name: "page1",
-                  label: "页面1",
+                  label: "导出Excel",
                   icon: "setting",
                   url: "Others/PageOne"
                 },
                 {
                   path: "/page2",
                   name: "page2",
-                  label: "页面2",
+                  label: "导出PDF",
                   icon: "setting",
                   url: "Others/PageTwo"
                 },
@@ -167,7 +181,7 @@ export default {
           ],
           userInfo: { username: "小陈2号", role: "普通用户", preTime: new Date(), preAddr: "武汉" },
           token: Mock.Random.guid(),
-          rightList: ["search", "add"],
+          rightList: ["search"],
           message: "获取成功"
         }
       }
